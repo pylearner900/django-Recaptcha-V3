@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recaptcha</title>
+    <style>
+        /* .grecaptcha-badge { visibility: hidden; } */
+    </style>
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+</head>
+<body>
+    <h1>Form</h1>
+    <hr>
+    <form  method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <!-- <div class="g-recaptcha" data-sitekey="6LcoWikqAAAAAGY_W9dJWOVctW_3LyacQttW8Cqp"></div>
+        <br/> -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
